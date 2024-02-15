@@ -4,13 +4,14 @@ import Welcome from "./../../molecules/Welcome/Welcome";
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 const VerificationCard = () => {
   const [otp, setOtp] = useState("");
   const { state } = useLocation();
   const [loading, setLoading] = useState(false);
   const { phoneNumber = "" } = state || {};
+  const navigate = useNavigate();
   const [incorrect, setIncorrect] = useState(false);
 
   const handleOtpChange = async (enteredOtp) => {
@@ -27,6 +28,7 @@ const VerificationCard = () => {
       }).then((response) => response.json());
       setLoading(false);
       if (response.success) {
+        navigate("/verify/success");
       } else {
         setIncorrect(true);
         setOtp("");
