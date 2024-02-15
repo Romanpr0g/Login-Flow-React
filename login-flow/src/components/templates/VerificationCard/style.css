@@ -1,0 +1,71 @@
+.btn--back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 44px;
+  width: 59px;
+  color: #414EF6;
+}
+
+.btn--back:hover > * {
+  color: #7A83F9;
+}
+
+.btn--back:active > * {
+  color: #2D37AC;
+}
+
+.btn--back__text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.056px;
+}
+
+.auth--block {
+  margin-bottom: 32px;
+}
+
+.btn--res {
+  width: 84px;
+  height: 24px;
+  color: #414EF6;
+  background-color: #FFF;
+  border: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.056px;
+  padding: 0;
+}
+
+.inputStyle {
+  width: 56px !important;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #CFD0D3;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+
+.inputStyle:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #414ef614;
+}
+
+.inputStyle:not(:last-child) {
+  margin-right: 8px;
+}
+
+.incorrect {
+  box-sizing: border-box;
+  border: 1px solid #EB5757;
+  font-size: 18px;
+}
+
+.auth--incorrect {
+  margin-top: 4px;
+  color: #EB5757;
+  font-size: 12px;
+  line-height: 16px;
+}
