@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Welcome from "../../molecules/Welcome/Welcome";
-import PhoneIinput from "../../organisms/PhoneInput/PhoneInput"
+import PhoneNumber from "../../organisms/PhoneNumber/PhoneNumber"
 import "./style.css";
 
 const LogInCard = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
   return (
     <>
       <Welcome />
@@ -13,7 +14,7 @@ const LogInCard = () => {
       </p>
       <div className="phone__block">
         <label className="phone__label">Phone number</label>
-        <PhoneIinput />
+        <PhoneNumber onPhoneNumberChange={setPhoneNumber} />
       </div>
     </>
   );

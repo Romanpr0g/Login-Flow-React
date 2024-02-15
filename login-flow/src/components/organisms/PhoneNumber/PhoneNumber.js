@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CountrySelect from "../../molecules/CountrySelect/CountrySelect";
+import PhoneInput from "../../molecules/PhoneInput/PhoneInput";
 import "./style.css";
 
-const NewTelephone = () => {
+const PhoneNumber = ({ onPhoneNumberChange }) => {
   const [selectedMask, setSelectedMask] = useState("(999) 999 99 99");
   const [placeholder, setPlaceholder] = useState("(000) 000 00 00");
   const [length, setLength] = useState(10);
@@ -51,11 +52,37 @@ const NewTelephone = () => {
     setIsFocused(isFocused);
   };
 
+  const handlePhoneChange = (phoneNumber) => {
+    const phoneArr = String(phoneNumber).split("");
+    const strArr = selectedMask
+      .split("")
+      .filter((item) => item !== "(" && item !== ")");
+    for (let i = 0; i < strArr.length; i++) {
+      if (strArr[i] !== "9") {
+        phoneArr.splice(i, 0, " ");
+      }
+    }
+    const phone = phoneArr.join("");
+    setPhoneNumber(phone);
+  };
+
+  useEffect(() => {
+    const filteredValue = phoneNumber.replace(/[^\d]/g, "");
+    handlePhoneChange(filteredValue);
+    onPhoneNumberChange(dialCode + " " + phoneNumber);
+  }, [dialCode, phoneNumber])
+
   return (
     <div className={`phone--container ${isFocused ? "focused" : ""}`}>
       <CountrySelect onSelect={handleSelect} onFocus={handleFocus} />
+      <PhoneInput
+        mask={selectedMask}
+        placeholder={placeholder}
+        length={length}
+        onPhoneNumberChange={handlePhoneChange}
+      />
     </div>
   );
 };
 
-export default NewTelephone;
+export default PhoneNumber;
