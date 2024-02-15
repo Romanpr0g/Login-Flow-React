@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import Welcome from "../../molecules/Welcome/Welcome";
 import PhoneNumber from "../../organisms/PhoneNumber/PhoneNumber";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const LogInCard = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const navigate = useNavigate();
   const [valid, setValid] = useState(false);
+
+  const handleButtonClick = () => {
+    navigate("/verify/", { state: { phoneNumber } });
+  };
 
   return (
     <>
@@ -23,6 +29,7 @@ const LogInCard = () => {
       </div>
       <button
         className="continue--btn"
+        onClick={handleButtonClick}
         disabled={!valid}
       >
         Continue
