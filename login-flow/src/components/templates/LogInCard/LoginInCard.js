@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Welcome from "../../molecules/Welcome/Welcome";
-import PhoneNumber from "../../organisms/PhoneNumber/PhoneNumber"
+import PhoneNumber from "../../organisms/PhoneNumber/PhoneNumber";
 import "./style.css";
 
 const LogInCard = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [valid, setValid] = useState(false);
+
   return (
     <>
       <Welcome />
@@ -14,8 +16,17 @@ const LogInCard = () => {
       </p>
       <div className="phone__block">
         <label className="phone__label">Phone number</label>
-        <PhoneNumber onPhoneNumberChange={setPhoneNumber} />
+        <PhoneNumber
+          onValidChange={setValid}
+          onPhoneNumberChange={setPhoneNumber}
+        />
       </div>
+      <button
+        className="continue--btn"
+        disabled={!valid}
+      >
+        Continue
+      </button>
     </>
   );
 };

@@ -3,7 +3,7 @@ import CountrySelect from "../../molecules/CountrySelect/CountrySelect";
 import PhoneInput from "../../molecules/PhoneInput/PhoneInput";
 import "./style.css";
 
-const PhoneNumber = ({ onPhoneNumberChange }) => {
+const PhoneNumber = ({ onValidChange, onPhoneNumberChange }) => {
   const [selectedMask, setSelectedMask] = useState("(999) 999 99 99");
   const [placeholder, setPlaceholder] = useState("(000) 000 00 00");
   const [length, setLength] = useState(10);
@@ -48,7 +48,6 @@ const PhoneNumber = ({ onPhoneNumberChange }) => {
   };
 
   const handleFocus = (isFocused) => {
-    console.log(isFocused);
     setIsFocused(isFocused);
   };
 
@@ -70,15 +69,22 @@ const PhoneNumber = ({ onPhoneNumberChange }) => {
     const filteredValue = phoneNumber.replace(/[^\d]/g, "");
     handlePhoneChange(filteredValue);
     onPhoneNumberChange(dialCode + " " + phoneNumber);
+    const isValid = length == filteredValue.length;
+    onValidChange(isValid);
   }, [dialCode, phoneNumber])
+
+  const handleValidChange = (isValid) => {
+    onValidChange(isValid);
+  };
 
   return (
     <div className={`phone--container ${isFocused ? "focused" : ""}`}>
-      <CountrySelect onSelect={handleSelect} onFocus={handleFocus} />
+      <CountrySelect onSelect={handleSelect} onFocus={handleFocus} onValidChange={handleValidChange} />
       <PhoneInput
         mask={selectedMask}
         placeholder={placeholder}
         length={length}
+        onValidChange={handleValidChange}
         onPhoneNumberChange={handlePhoneChange}
       />
     </div>

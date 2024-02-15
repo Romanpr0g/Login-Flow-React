@@ -5,9 +5,10 @@ import belarus from "./../../../assets/img/flags/belarus.png";
 import russia from "./../../../assets/img/flags/russia.jpg"
 import usa from "./../../../assets/img/flags/usa.png"
 import "./style.css"
-const CountrySelect = ({ onSelect, onFocus }) => {
+const CountrySelect = ({ onSelect, onFocus, onValidChange }) => {
   const handleChange = (value) => {
     onSelect && onSelect(value);
+    onValidChange(false);
   };
 
   const handleDropdownVisibleChange = (visible) => {
@@ -21,7 +22,6 @@ const CountrySelect = ({ onSelect, onFocus }) => {
         className="phone--select"
         dropdownAlign={{ offset: [0, 20] }}
         popupClassName="dropdown--block"
-        aria-selected="false"
         onDropdownVisibleChange={handleDropdownVisibleChange}
         dropdownStyle={{
           width: 312,
