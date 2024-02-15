@@ -1,0 +1,30 @@
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.08px;
+  margin-bottom: 8px;
+}
+
+.telephone--info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.056px;
+  margin-bottom: 24px;
+}
+
+.phone__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+  width: 309px;
+}
+
+.phone__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 140%;
+}
