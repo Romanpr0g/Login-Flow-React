@@ -45,7 +45,9 @@
   border-radius: 8px;
   border: 1px solid #CFD0D3;
   color: transparent;
-  text-shadow: 0 0 0 black;
+  text-shadow: 0 0 0 #3E3E47;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .inputStyle:focus {
@@ -68,4 +70,13 @@
   color: #EB5757;
   font-size: 12px;
   line-height: 16px;
+}
+
+.verification-code__disabled {
+  border: 1px solid #E2E2E4;
+  
+}
+
+.verification-code__disabled::placeholder {
+  color: #E2E2E4;
 }

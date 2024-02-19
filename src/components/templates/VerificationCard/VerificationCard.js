@@ -19,6 +19,7 @@ const VerificationCard = () => {
     setOtp(enteredOtp);
     if (enteredOtp.length === 5) {
       setLoading(true);
+      setOtp("");
       const response = await fetch("/api/verify-otp", {
         method: "POST",
         headers: {
@@ -51,7 +52,7 @@ const VerificationCard = () => {
       </p>
       <div className="auth--block">
         <OtpInput
-          inputStyle={`inputStyle ${incorrect ? "incorrect" : ""}`}
+          inputStyle={`inputStyle ${incorrect ? "incorrect" : ""} ${loading ? "verification-code__disabled" : ""}`}
           inputType="tel"
           value={otp}
           onChange={handleOtpChange}
