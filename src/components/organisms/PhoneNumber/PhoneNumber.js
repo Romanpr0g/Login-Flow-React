@@ -17,7 +17,7 @@ const PhoneNumber = ({ onValidChange, onPhoneNumberChange }) => {
         setDialCode("+48");
         setSelectedMask("(999) 999 999");
         setPlaceholder("(000) 000 000");
-        length === 10 &&
+        phoneNumber.length === 13 &&
           setPhoneNumber(phoneNumber.split("").slice(0, -1).join(""));
         setLength(9);
         break;
@@ -25,7 +25,7 @@ const PhoneNumber = ({ onValidChange, onPhoneNumberChange }) => {
         setDialCode("+375");
         setSelectedMask("(99) 999 99 99");
         setPlaceholder("(00) 000 00 00");
-        length === 10 &&
+        phoneNumber.length === 13 &&
           setPhoneNumber(phoneNumber.split("").slice(0, -1).join(""));
         setLength(9);
         break;
@@ -69,9 +69,9 @@ const PhoneNumber = ({ onValidChange, onPhoneNumberChange }) => {
     const filteredValue = phoneNumber.replace(/[^\d]/g, "");
     handlePhoneChange(filteredValue);
     onPhoneNumberChange(dialCode + " " + phoneNumber);
-    const isValid = length == filteredValue.length;
+    const isValid = length === filteredValue.length;
     onValidChange(isValid);
-  }, [dialCode, phoneNumber])
+  }, [dialCode, phoneNumber]);
 
   const handleValidChange = (isValid) => {
     onValidChange(isValid);
@@ -79,13 +79,18 @@ const PhoneNumber = ({ onValidChange, onPhoneNumberChange }) => {
 
   return (
     <div className={`phone--container ${isFocused ? "focused" : ""}`}>
-      <CountrySelect onSelect={handleSelect} onFocus={handleFocus} onValidChange={handleValidChange} />
+      <CountrySelect
+        onSelect={handleSelect}
+        onFocus={handleFocus}
+        onValidChange={handleValidChange}
+      />
       <PhoneInput
         mask={selectedMask}
         placeholder={placeholder}
         length={length}
         onValidChange={handleValidChange}
         onPhoneNumberChange={handlePhoneChange}
+        phoneNumber={phoneNumber}
       />
     </div>
   );

@@ -4,15 +4,15 @@
   gap: 4px;
   margin-bottom: 44px;
   width: 59px;
-  color: #414EF6;
+  color: #414ef6;
 }
 
 .btn--back:hover > * {
-  color: #7A83F9;
+  color: #7a83f9;
 }
 
 .btn--back:active > * {
-  color: #2D37AC;
+  color: #2d37ac;
 }
 
 .btn--back__text {
@@ -29,8 +29,8 @@
 .btn--res {
   width: 84px;
   height: 24px;
-  color: #414EF6;
-  background-color: #FFF;
+  color: #414ef6;
+  background-color: #fff;
   border: 0;
   font-size: 14px;
   font-weight: 600;
@@ -43,9 +43,9 @@
   width: 56px !important;
   height: 48px;
   border-radius: 8px;
-  border: 1px solid #CFD0D3;
+  border: 1px solid #cfd0d3;
   color: transparent;
-  text-shadow: 0 0 0 #3E3E47;
+  text-shadow: 0 0 0 #3e3e47;
   font-size: 18px;
   font-weight: 500;
 }
@@ -61,22 +61,21 @@
 
 .incorrect {
   box-sizing: border-box;
-  border: 1px solid #EB5757;
+  border: 1px solid #eb5757;
   font-size: 18px;
 }
 
 .auth--incorrect {
   margin-top: 4px;
-  color: #EB5757;
+  color: #eb5757;
   font-size: 12px;
   line-height: 16px;
 }
 
 .verification-code__disabled {
-  border: 1px solid #E2E2E4;
-  
+  border: 1px solid #e2e2e4;
 }
 
 .verification-code__disabled::placeholder {
-  color: #E2E2E4;
+  color: #e2e2e4;
 }

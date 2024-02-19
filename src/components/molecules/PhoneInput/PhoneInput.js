@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
 import { ReactComponent as Cross } from "./../../../assets/svg/cross.svg";
-import "./style.css"
+import "./style.css";
 
-const PhoneInput = ({ mask, placeholder, length, onValidChange, onPhoneNumberChange }) => {
+const PhoneInput = ({
+  mask,
+  placeholder,
+  length,
+  onValidChange,
+  onPhoneNumberChange,
+  phoneNumber,
+}) => {
   const [showCross, setShowCross] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
@@ -14,16 +21,15 @@ const PhoneInput = ({ mask, placeholder, length, onValidChange, onPhoneNumberCha
     onPhoneNumberChange("");
   };
 
-  const handleInputChange = (e) => { 
+  const handleInputChange = (e) => {
     const filteredValue = e.target.value.replace(/[^\d]/g, "");
     setInputValue(filteredValue);
     setShowCross(filteredValue.length > 0);
     if (length > filteredValue.length) {
       onValidChange(false);
     }
-      onPhoneNumberChange(filteredValue);
+    onPhoneNumberChange(filteredValue);
   };
-
   return (
     <>
       <InputMask
@@ -31,7 +37,7 @@ const PhoneInput = ({ mask, placeholder, length, onValidChange, onPhoneNumberCha
         maskChar=""
         className="phone--input"
         placeholder={placeholder}
-        value={inputValue}
+        value={phoneNumber.replace(/[^\d]/g, "")}
         onChange={handleInputChange}
       />
       {showCross && (

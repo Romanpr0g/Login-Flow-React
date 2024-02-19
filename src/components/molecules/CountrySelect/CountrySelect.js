@@ -2,12 +2,12 @@ import React from "react";
 import { Select } from "antd";
 import poland from "./../../../assets/img/flags/poland.jpg";
 import belarus from "./../../../assets/img/flags/belarus.png";
-import russia from "./../../../assets/img/flags/russia.jpg"
-import usa from "./../../../assets/img/flags/usa.png"
-import "./style.css"
+import russia from "./../../../assets/img/flags/russia.jpg";
+import usa from "./../../../assets/img/flags/usa.png";
+import "./style.css";
 const CountrySelect = ({ onSelect, onFocus, onValidChange }) => {
   const handleChange = (value) => {
-    onSelect && onSelect(value);
+    onSelect(value);
     onValidChange(false);
   };
 
