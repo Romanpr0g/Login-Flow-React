@@ -9,9 +9,11 @@ export function makeServer() {
     routes() {
       this.namespace = "api";
 
-      this.get("/verification-codes", (schema) => {
-        return schema.verificationCodes.all();
-      });
+      this.get("/user", () => ({
+        user: [
+          {id: 1, name: "Roman", surname: "Kachanov"}
+        ],
+      }));
 
       this.post("/verify-otp", (schema, request) => {
         const { code } = JSON.parse(request.requestBody);

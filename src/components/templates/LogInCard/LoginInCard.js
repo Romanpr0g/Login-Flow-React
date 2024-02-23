@@ -10,7 +10,7 @@ const LogInCard = () => {
   const [valid, setValid] = useState(false);
 
   const handleButtonClick = () => {
-    navigate("/verify/", { state: { phoneNumber } });
+    navigate("/login/verify", { state: { phoneNumber } });
   };
 
   return (

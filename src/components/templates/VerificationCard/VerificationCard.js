@@ -14,6 +14,17 @@ const VerificationCard = () => {
   const navigate = useNavigate();
   const [incorrect, setIncorrect] = useState(false);
 
+  const setUser = async () => {
+    const response = await fetch("/api/user", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => response.json());
+    const data = response.user[0];
+    localStorage.setItem('login-user', JSON.stringify(data));
+  }
+
   const handleOtpChange = async (enteredOtp) => {
     setIncorrect(false);
     setOtp(enteredOtp);
@@ -29,7 +40,8 @@ const VerificationCard = () => {
       }).then((response) => response.json());
       setLoading(false);
       if (response.success) {
-        navigate("/verify/success");
+        await setUser();
+        navigate("/");
       } else {
         setIncorrect(true);
         setOtp("");
