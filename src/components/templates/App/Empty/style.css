@@ -1,0 +1,11 @@
+.empty--title {
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.empty--info {
+  color: #A5A5AC;
+  font-size: 14px;
+  margin-bottom: 24px;
+}

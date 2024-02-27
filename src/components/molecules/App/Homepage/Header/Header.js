@@ -4,7 +4,6 @@ import "./style.css";
 
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("login-user"));
-  console.log(user.name);
   return (
     <header className="header">
       <h3 className="header__user--name">{user.name + " " + user.surname}</h3>

@@ -1,17 +1,18 @@
 import React from "react";
 import MainLayout from "../../../templates/App/MainLayout/MainLayout";
-import SplitContent from "../../../organisms/App/SplitContent/SplitContent";
-import Content from "../../../molecules/App/Homepage/Content/Content";
 import Header from "../../../molecules/App/Homepage/Header/Header";
+import FeaturedTeams from "../../../templates/App/FeaturedTeams/FeaturedTeams";
+import UpcomingEvents from "../../../templates/App/UpcomingEvents/UpcomingEvents";
+import "./style.css"
 
 const Homepage = () => {
   return (
     <MainLayout>
       <Header />
-      <SplitContent>
-        <Content>Content</Content>
-        <Content>Content 2</Content>
-      </SplitContent>
+      <div className="split-content">
+        <FeaturedTeams />
+        <UpcomingEvents />
+      </div>
     </MainLayout>
   );
 };
