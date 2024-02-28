@@ -1,10 +1,10 @@
 .split-content {
   display: grid;
   grid-column: 2/4;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 38% 62%;
   background-color: #f5f6fe;
   border-top: 1px solid #eaeaeb;
+  overflow: hidden;
 }
 
 .split-content > :not(:last-child) {

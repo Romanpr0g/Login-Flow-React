@@ -1,4 +1,33 @@
 .featured-teams__content {
   display: flex;
   padding: 40px 35px 50px 32px;
+  overflow: hidden;
+}
+
+.featured-teams__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.team-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+}
+
+.featured-teams__introduction {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-teams__introduction--title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
 }
