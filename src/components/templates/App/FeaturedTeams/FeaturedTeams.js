@@ -23,11 +23,11 @@ const FeaturedTeams = () => {
         if (data) {
           setData(data);
         } else {
-          console.error("Некорректные данные с сервера:", data);
+          console.error("Incorrect data from the server:", data);
         }
       })
       .catch((error) => {
-        console.error("Ошибка запроса", error);
+        console.error("The request failed", error);
       })
       .finally(() => {
         setLoading(false);
