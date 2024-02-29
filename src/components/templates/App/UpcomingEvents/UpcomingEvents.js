@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import Empty from "../Empty/Empty";
 import { Spin } from "antd";
+import EventCard from "../../../organisms/App/EventCard/EventCard";
 import CreateButton from "../../../atoms/App/CreateButton/CreateButton";
 import "./style.css";
 
 const UpcomingEvents = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [maxHeight, setMaxHeight] = useState(null);
+  const divRef = createRef();
+  const ulRef = createRef();
 
   useEffect(() => {
     fetch("/api/events", {
@@ -31,19 +35,56 @@ const UpcomingEvents = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (ulRef.current) {
+        const children = ulRef.current.children;
+        const maxHeight = divRef.current.offsetHeight - 64;
+        const { totalHeight } = Array.from(children).reduce(
+          (acc, child) => {
+            const childHeight = child.offsetHeight;
+            if (acc.totalHeight + childHeight <= maxHeight) {
+              return {
+                totalHeight: acc.totalHeight + childHeight + 16, 
+              };
+            } else {
+              return acc; 
+            }
+          },
+          { totalHeight: 0 }
+        );
+        setMaxHeight(totalHeight - 16);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [ulRef, divRef]);
+
   return (
     <div className="upcoming-events__content">
       {loading ? (
         <Spin size="large" delay={100} />
       ) : data?.events && Object.keys(data.events).length > 0 ? (
-        <div className="upcoming-events__block">
+        <div className="upcoming-events__block" ref={divRef}>
           <div className="upcoming-events__introduction">
             <h3 className="upcoming-events__introduction--title">
               Upcoming Events
             </h3>
             <CreateButton name="Event" width={116} height={40} />
           </div>
-          <ul className="upcoming-events__list"></ul>
+          <ul
+            className="upcoming-events__list"
+            ref={ulRef}
+            style={{ maxHeight: maxHeight }}
+          >
+            {data.events.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </ul>
         </div>
       ) : (
         <Empty name="events" />

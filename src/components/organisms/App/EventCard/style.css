@@ -1,0 +1,159 @@
+.event-card__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #eaeaeb;
+  width: 100%;
+}
+
+.event-card__date--block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 26px;
+  border-right: 1px solid #eaeaeb;
+  min-width: 124px;
+}
+
+.event-card__event--icon {
+  color: #414ef6;
+}
+
+.event-card__date--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #22222b;
+}
+
+.event-card__date--week-day {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.event-card__date--day {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 8px;
+}
+
+.event-card__date--time {
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.event-card__event--type {
+  color: #60616c;
+  font-size: 12px;
+  line-height: 17px;
+  border-radius: 4px;
+  border: 1px solid #808089;
+  padding: 4px 8px 2px;
+  text-transform: uppercase;
+}
+
+.upcoming-events__general-info--block {
+  display: flex;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.event-card__tournament--block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card__team--block {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.event-card__team--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-card__team--name {
+  color: #22222b;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.event-card__team--versus {
+  position: relative;
+  bottom: 12px;
+  color: #808089;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.event-card__location--block {
+  position: relative;
+  bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 9px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.event-card__location--stadium {
+  color: #3e3e47;
+}
+
+.event-card__location--address {
+  color: #60616c;
+  white-space: nowrap;
+}
+
+.event-card__trophy--block {
+  display: flex;
+  gap: 4px;
+}
+
+.event-card__trophy--icon {
+  color: #60616c;
+  width: 16px;
+  height: 16px;
+}
+
+.event-card__trophy--name {
+  color: #60616c;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.event-card__trophy--tournament {
+  color: #3e3e47;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.social-tornament {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.event-card__details--icon {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  transform: rotate(90deg);
+  color: #a5a5ac;
+}
