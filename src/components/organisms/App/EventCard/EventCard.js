@@ -27,7 +27,6 @@ const EventCard = ({ event }) => {
   const eventDate = new Date(event.date);
   const dayOfWeek = daysOfWeek[eventDate.getDay()];
   const dayAndMonth = event.date.split(" ").slice(0, 2).reverse().join(" ");
-  // const location = event.location
 
   return (
     <li key={event.id} className="event-card__block">
@@ -75,7 +74,7 @@ const EventCard = ({ event }) => {
         </div>
         <div className="event-card__location--block">
           <span className="event-card__location--stadium">{event.stadium}</span>
-          <div>
+          <div className="event-card__location--adress-block">
             <p className="event-card__location--address">
               {event.location.split(" ").slice(0, 2).join(" ")}
             </p>

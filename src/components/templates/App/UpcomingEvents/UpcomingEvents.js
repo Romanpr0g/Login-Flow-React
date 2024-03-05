@@ -1,8 +1,9 @@
-import React, { useState, useEffect, createRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, createRef } from "react";
 import Empty from "../Empty/Empty";
 import { Spin } from "antd";
 import EventCard from "../../../organisms/App/EventCard/EventCard";
 import CreateButton from "../../../atoms/App/CreateButton/CreateButton";
+import UpcomingEventsSkeleton from "../../../organisms/App/Skeleton/UpcomingEventsSkeleton/UpcomingEventsSkeleton";
 import "./style.css";
 
 const UpcomingEvents = () => {
@@ -35,7 +36,7 @@ const UpcomingEvents = () => {
       });
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleResize = () => {
       if (ulRef.current) {
         const children = ulRef.current.children;
@@ -45,10 +46,10 @@ const UpcomingEvents = () => {
             const childHeight = child.offsetHeight;
             if (acc.totalHeight + childHeight <= maxHeight) {
               return {
-                totalHeight: acc.totalHeight + childHeight + 16, 
+                totalHeight: acc.totalHeight + childHeight + 16,
               };
             } else {
-              return acc; 
+              return acc;
             }
           },
           { totalHeight: 0 }
@@ -67,7 +68,7 @@ const UpcomingEvents = () => {
   return (
     <div className="upcoming-events__content">
       {loading ? (
-        <Spin size="large" delay={100} />
+        <UpcomingEventsSkeleton />
       ) : data?.events && Object.keys(data.events).length > 0 ? (
         <div className="upcoming-events__block" ref={divRef}>
           <div className="upcoming-events__introduction">
