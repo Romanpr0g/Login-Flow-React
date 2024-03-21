@@ -1,11 +1,18 @@
 import React from "react";
+import clsx from "clsx";
 import { ReactComponent as Teams } from "../../../../assets/svg/teams.svg";
 import { ReactComponent as Details } from "../../../../assets/svg/details.svg";
-import "./style.css";
+import "./style.scss";
 
-const TeamCard = ({ team }) => {
+const TeamCard = ({ team, children }) => {
+  console.log(false);
   return (
-    <li key={team.id} className="team-card__block">
+    <li
+      key={team.id}
+      className={clsx("team-card__block", {
+        "team-card__teams--page": !children,
+      })}
+    >
       <div className="team-card__img">
         <Teams className="team-card__icon" />
       </div>

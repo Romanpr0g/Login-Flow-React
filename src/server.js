@@ -23,6 +23,12 @@ export function makeServer() {
           { id: 6, name: "U8 Puffer", members: 24 },
           { id: 7, name: "U8 Puffer", members: 24 },
           { id: 8, name: "U8 Puffer", members: 24 },
+          { id: 9, name: "U8 Puffer", members: 24 },
+          { id: 10, name: "U8 Puffer", members: 24 },
+          { id: 11, name: "U8 Puffer", members: 24 },
+          { id: 12, name: "U8 Puffer", members: 24 },
+          { id: 13, name: "U8 Puffer", members: 24 },
+          { id: 14, name: "U8 Puffer", members: 24 },
         ],
       }));
 

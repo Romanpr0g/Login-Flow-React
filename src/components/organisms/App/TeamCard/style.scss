@@ -40,3 +40,26 @@
   color: #a5a5ac;
   margin-left: auto;
 }
+
+.team-card__teams--page {
+  gap: 16px;
+
+  .team-card__img {
+    width: 66px;
+    height: 66px;
+  }
+
+  .team-card__name {
+    color: #22222b;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .team-card__members {
+    color: #a5a5ac;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

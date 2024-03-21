@@ -6,13 +6,14 @@ import VerificationCard from "./components/templates/LogIn/VerificationCard/Veri
 import LogInCard from "./components/templates/LogIn/LogInCard/LoginInCard";
 import PrivateHomepageRoute from "./routes/PrivateHomepageRoute";
 import PrivateLoginRoute from "./routes/PrivateLoginRoute";
+import Teams from "./components/pages/App/Teams/Teams"
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<PrivateHomepageRoute element={Homepage} />} />
-        <Route path="/teams" element={<PrivateHomepageRoute element={Homepage} />} />
+        <Route path="/teams" element={<PrivateHomepageRoute element={Teams} />} />
         <Route path="/schedules" element={<PrivateHomepageRoute element={Homepage} />} />
         <Route path="/settings" element={<PrivateHomepageRoute element={Homepage} />} />
         <Route path="/login" element={<PrivateLoginRoute element={LoginFlow} />}>
