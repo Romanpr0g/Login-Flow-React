@@ -1,0 +1,63 @@
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.08px;
+  margin-bottom: 8px;
+}
+
+.telephone--info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.056px;
+  margin-bottom: 24px;
+}
+
+.phone__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+  width: 309px;
+}
+
+.phone__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.continue--btn {
+  width: 101px;
+  height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #414ef6;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.056px;
+}
+
+.continue--btn:hover {
+  background-color: #7a83f9;
+}
+
+.continue--btn:active {
+  background-color: #2d37ac;
+}
+
+.continue--btn:disabled {
+  background-color: #d9dcfd;
+}
+
+.input--cross {
+  position: absolute;
+  right: 12px;
+  top: 33px;
+}

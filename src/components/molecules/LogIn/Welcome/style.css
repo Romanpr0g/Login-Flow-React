@@ -1,0 +1,25 @@
+.club--managment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 132px;
+  border-radius: 32px;
+  background-color: #ffda32;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 140%;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.128px;
+  margin-bottom: 52px;
+}
+
+.title span {
+  color: #414ef6;
+}
