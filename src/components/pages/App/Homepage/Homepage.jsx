@@ -8,7 +8,7 @@ import "./style.css";
 
 const Homepage = () => {
   return (
-    <MainLayout>
+    <>
       <Header />
       <div className="split-content">
         <FeaturedTeams>
@@ -16,7 +16,7 @@ const Homepage = () => {
         </FeaturedTeams>
         <UpcomingEvents />
       </div>
-    </MainLayout>
+    </>
   );
 };
 

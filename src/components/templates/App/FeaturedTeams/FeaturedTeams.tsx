@@ -66,7 +66,7 @@ const FeaturedTeams: React.FC<PropsWithChildren> = ({ children }) => {
   }, [handleResize]);
 
   useEffect(() => {
-    if (data?.teams.length) {
+    if (data?.teams?.length) {
       handleResize()
     }
   }, [data])
@@ -89,7 +89,7 @@ const FeaturedTeams: React.FC<PropsWithChildren> = ({ children }) => {
           </ul>
         </div>
       ) : (
-        <Empty name="teams" />
+        <Empty name="teams" buttonWidth={114} buttonHeight={40} />
       )}
     </div>
   );

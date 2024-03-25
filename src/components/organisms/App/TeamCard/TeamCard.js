@@ -1,17 +1,22 @@
 import React from "react";
 import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as Teams } from "../../../../assets/svg/teams.svg";
 import { ReactComponent as Details } from "../../../../assets/svg/details.svg";
 import "./style.scss";
 
 const TeamCard = ({ team, children }) => {
-  console.log(false);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/teams/details")
+  }
   return (
     <li
       key={team.id}
       className={clsx("team-card__block", {
         "team-card__teams--page": !children,
       })}
+      onClick={handleClick}
     >
       <div className="team-card__img">
         <Teams className="team-card__icon" />

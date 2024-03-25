@@ -1,27 +1,3 @@
-.btn--back {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 44px;
-  width: 59px;
-  color: #414ef6;
-}
-
-.btn--back:hover > * {
-  color: #7a83f9;
-}
-
-.btn--back:active > * {
-  color: #2d37ac;
-}
-
-.btn--back__text {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.056px;
-}
-
 .auth--block {
   margin-bottom: 32px;
 }

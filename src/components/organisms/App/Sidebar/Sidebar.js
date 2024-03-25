@@ -28,7 +28,7 @@ const Sidebar = () => {
         </li>
         <li
           className={`menu__item ${
-            location.pathname === "/teams" ? "active--menu" : ""
+            location.pathname.includes("/teams") ? "active--menu" : ""
           }`}
         >
           <NavLink to="/teams" className="menu__link">

@@ -1,8 +1,8 @@
-import { ReactComponent as Arrow } from "../../../../assets/svg/arrow.svg";
 import "./style.css";
 import Welcome from "../../../molecules/LogIn/Welcome/Welcome";
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
+import BackButton from "../../../atoms/App/BackButton/BackButton";
 
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
@@ -51,10 +51,7 @@ const VerificationCard = () => {
 
   return (
     <>
-      <NavLink to="/" className="btn--back">
-        <Arrow className="back__img" />
-        <span className="btn--back__text">Back</span>
-      </NavLink>
+      <BackButton to="/" name="Back" style={{marginBottom: "44px"}}/>
       <Welcome />
       <h3 className="subtitle">Verification code</h3>
       <p className="telephone--info">
