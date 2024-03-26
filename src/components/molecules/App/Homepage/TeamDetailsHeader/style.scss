@@ -1,0 +1,35 @@
+.team-details__header {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  background-color: #ffffff;
+}
+
+.team-details__header--return {
+  padding: 12px 0 12px 32px;
+  border-bottom: 1px solid #eaeaeb;
+}
+
+.team-details__team-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.team-info__block {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.team-info__image--uploader {
+  width: 88px;
+  height: 88px;
+}
+
+.team-info__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #22222b;
+}
