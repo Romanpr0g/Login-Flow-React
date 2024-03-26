@@ -89,7 +89,7 @@ const FeaturedTeams: React.FC<PropsWithChildren> = ({ children }) => {
           </ul>
         </div>
       ) : (
-        <Empty name="teams" buttonWidth={114} buttonHeight={40} />
+        <Empty title="Teams" text="teams" buttonText="Create Team" buttonWidth={114} buttonHeight={40} />
       )}
     </div>
   );

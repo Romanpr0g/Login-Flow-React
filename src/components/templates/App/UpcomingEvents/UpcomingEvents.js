@@ -75,7 +75,7 @@ const UpcomingEvents = () => {
             <h3 className="upcoming-events__introduction--title">
               Upcoming Events
             </h3>
-            <CreateButton name="Event" width={116} height={40} />
+            <CreateButton name="Create Event" width={116} height={40} />
           </div>
           <ul
             className="upcoming-events__list"
@@ -88,7 +88,7 @@ const UpcomingEvents = () => {
           </ul>
         </div>
       ) : (
-        <Empty name="events" />
+        <Empty title="Events" text="events" buttonText="Create Team" buttonWidth={114} buttonHeight={40} />
       )}
     </div>
   );

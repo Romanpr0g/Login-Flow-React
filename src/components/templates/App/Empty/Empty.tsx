@@ -4,23 +4,36 @@ import { ReactComponent as PlussIcon } from "../../../../assets/svg/plus.svg";
 import "./style.css";
 
 type EmptyProps = {
-  name: string;
-  className?: string;
+  title: string;
+  text: string;
+  buttonText: string;
   buttonWidth: number;
   buttonHeight: number;
+  icon?: boolean;
+  className?: string;
 };
- 
-const Empty: React.FC<EmptyProps> = ({ name, className, buttonWidth, buttonHeight }) => {
+
+const Empty: React.FC<EmptyProps> = ({
+  title,
+  text,
+  buttonText,
+  buttonWidth,
+  buttonHeight,
+  icon,
+  className,
+}) => {
   return (
     <div className={className}>
-      <h3 className="empty--title">
-        {"No" + " " + name.charAt(0).toUpperCase() + name.slice(1)}
-      </h3>
+      <h3 className="empty--title">No {title}</h3>
       <p className="empty--info">
-        {`You don't have any ${name} yet.`}
-        <br /> Let's fix it!
+        You don't have any {text} yet. Let's fix it!
       </p>
-      <CreateButton name="Team" width={buttonWidth} height={buttonHeight} icon={<PlussIcon />} />
+      <CreateButton
+        name={buttonText}
+        width={buttonWidth}
+        height={buttonHeight}
+        icon={icon}
+      />
     </div>
   );
 };

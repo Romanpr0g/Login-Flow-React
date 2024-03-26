@@ -9,7 +9,15 @@ const TeamDetails: React.FC = () => {
       <TeamDetailsHeader />
       <div className="team-details__block">
         <div className="team-details__empty">
-          <Empty name="members" className={"emty-block--center"} buttonWidth={155} buttonHeight={48} />
+          <Empty
+            title="Members"
+            text="team's members"
+            buttonText="Add Member"
+            buttonWidth={155}
+            buttonHeight={48}
+            icon
+            className="empty--centered"
+          />
         </div>
       </div>
     </>

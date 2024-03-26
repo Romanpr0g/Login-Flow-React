@@ -13,7 +13,7 @@ const TeamDetailsHeader: React.FC = () => {
 
       <div className="team-details__team-info">
         <div className="team-info__block">
-          <img src={team} alt="team" className="team-info__image--uploader"/>
+          <img src={team} alt="team" className="team-info__image--uploader" />
           <h4 className="team-info__title">Wildkard U12s</h4>
         </div>
         <DeleteButton name="Team" width={113} height={40} />
