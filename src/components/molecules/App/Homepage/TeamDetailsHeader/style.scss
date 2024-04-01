@@ -1,0 +1,38 @@
+.team-details__header {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  background-color: #ffffff;
+}
+
+.team-details__header--return {
+  padding: 12px 0 12px 32px;
+  border-bottom: 1px solid #eaeaeb;
+}
+
+.team-details__team-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.team-info__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.team-info__title {
+  padding: 12px 40px 12px 12px;
+  width: 312px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #22222b;
+  border: 0;
+  &:focus {
+    border: 1px solid #cfd0d3;
+    box-shadow: none;
+  }
+}

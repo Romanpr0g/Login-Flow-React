@@ -1,0 +1,15 @@
+.teams-header {
+  background-color: #ffffff;
+  grid-column: 2/4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+}
+
+.teams-header__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #22222B;
+}

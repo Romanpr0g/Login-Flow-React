@@ -1,0 +1,18 @@
+.signout--button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #eaeaeb;
+  background-color: transparent;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signout--button:hover {
+  color: #7a83f9;
+}
+
+.signout--button:active {
+  color: #2d37ac;
+}
