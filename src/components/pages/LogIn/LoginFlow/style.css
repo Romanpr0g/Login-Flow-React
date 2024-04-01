@@ -1,0 +1,21 @@
+.login-flow__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login-flow__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 52px;
+  border-radius: 16px;
+  max-width: 428px;
+}
+
+.welcome--img {
+  display: block;
+  margin-bottom: 64px;
+}

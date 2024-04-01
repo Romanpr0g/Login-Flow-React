@@ -1,0 +1,18 @@
+.team-roster-header__block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .team-roster-header__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #3e3e47;
+  }
+
+  .team-roster-header__members {
+    font-size: 14px;
+    line-height: 22px;
+    color: #a5a5ac;
+  }
+}
