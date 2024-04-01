@@ -1,6 +1,7 @@
 import React from "react";
 import Empty from "../Empty/Empty";
 import TeamDetailsHeader from "../../../molecules/App/Homepage/TeamDetailsHeader/TeamDetailsHeader";
+import TeamRoster from "../TeamRoster/TeamRoster";
 import { useLocation } from "react-router-dom";
 import "./style.scss";
 
@@ -10,7 +11,8 @@ const TeamDetails: React.FC = () => {
     <>
       <TeamDetailsHeader team={state.team} />
       <div className="team-details__block">
-        <div className="team-details__empty">
+        <TeamRoster team={state.team}/>
+        {/* <div className="team-details__empty">
           <Empty
             title="Members"
             text="team's members"
@@ -20,7 +22,7 @@ const TeamDetails: React.FC = () => {
             icon
             className="empty--centered"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
