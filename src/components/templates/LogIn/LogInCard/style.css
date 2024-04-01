@@ -55,9 +55,3 @@
 .continue--btn:disabled {
   background-color: #d9dcfd;
 }
-
-.input--cross {
-  position: absolute;
-  right: 12px;
-  top: 33px;
-}

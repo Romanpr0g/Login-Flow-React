@@ -4,33 +4,32 @@ export function makeServer() {
   let server = createServer({
     models: {
       verificationCode: Model,
+      team: Model,
     },
 
     routes() {
       this.namespace = "api";
 
+
+      this.post("img", () => {
+        // Вернуть тестовые данные или обработать запрос
+        return { message: 'Success' };
+      });
+
       this.get("/user", () => ({
         user: [{ id: 1, name: "Roman", surname: "Kachanov" }],
       }));
 
-      this.get("/teams", () => ({
-        teams: [
-          { id: 1, name: "U8 Puffer", members: 24 },
-          { id: 2, name: "U8 Puffer", members: 24 },
-          { id: 3, name: "U8 Puffer", members: 24 },
-          { id: 4, name: "U8 Puffer", members: 24 },
-          { id: 5, name: "U8 Puffer", members: 24 },
-          { id: 6, name: "U8 Puffer", members: 24 },
-          { id: 7, name: "U8 Puffer", members: 24 },
-          { id: 8, name: "U8 Puffer", members: 24 },
-          { id: 9, name: "U8 Puffer", members: 24 },
-          { id: 10, name: "U8 Puffer", members: 24 },
-          { id: 11, name: "U8 Puffer", members: 24 },
-          { id: 12, name: "U8 Puffer", members: 24 },
-          { id: 13, name: "U8 Puffer", members: 24 },
-          { id: 14, name: "U8 Puffer", members: 24 },
-        ],
-      }));
+      this.get("/teams", (schema) => {
+        return {
+          teams: schema.db.teams,
+        };
+      });
+
+      this.patch("/teams", (schema, request) => {
+        const { id, name } = JSON.parse(request.requestBody);
+        return schema.db.teams.update({ name: name });
+      });
 
       this.get("/events", () => ({
         events: [
@@ -112,6 +111,11 @@ export function makeServer() {
       { id: 3, code: 33333 },
       { id: 4, code: 44444 },
       { id: 5, code: 55555 },
+    ],
+    teams: [
+      { id: 1, name: "U8 Puffer", members: 24 },
+      { id: 2, name: "Wildkard U12s", members: 24 },
+      { id: 3, name: "U8 Puffer", members: 24 },
     ],
   });
 

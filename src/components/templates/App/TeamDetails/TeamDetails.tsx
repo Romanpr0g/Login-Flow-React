@@ -1,12 +1,14 @@
 import React from "react";
 import Empty from "../Empty/Empty";
 import TeamDetailsHeader from "../../../molecules/App/Homepage/TeamDetailsHeader/TeamDetailsHeader";
+import { useLocation } from "react-router-dom";
 import "./style.scss";
 
 const TeamDetails: React.FC = () => {
+  const { state } = useLocation();
   return (
     <>
-      <TeamDetailsHeader />
+      <TeamDetailsHeader team={state.team} />
       <div className="team-details__block">
         <div className="team-details__empty">
           <Empty

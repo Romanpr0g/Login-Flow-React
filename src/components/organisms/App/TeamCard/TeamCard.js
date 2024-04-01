@@ -8,7 +8,7 @@ import "./style.scss";
 const TeamCard = ({ team, children }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/teams/details")
+    navigate("/teams/details", { state: { team } })
   }
   return (
     <li

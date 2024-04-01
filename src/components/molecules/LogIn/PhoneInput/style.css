@@ -5,3 +5,8 @@
   letter-spacing: -0.064px;
   outline: none;
 }
+
+.input--cross {
+  position: absolute;
+  right: 12px;
+}

@@ -34,7 +34,6 @@ const FeaturedTeams: React.FC<PropsWithChildren> = ({ children }) => {
       .then((data: { teams: Team[] }) => {
         if (data) {
           setData(data);
-          console.log("data", data);
         } else {
           console.error("Incorrect data from the server:", data);
         }

@@ -17,19 +17,22 @@
 }
 
 .team-info__block {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-.team-info__image--uploader {
-  width: 88px;
-  height: 88px;
-}
-
 .team-info__title {
+  padding: 12px 40px 12px 12px;
+  width: 312px;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: #22222b;
+  border: 0;
+  &:focus {
+    border: 1px solid #cfd0d3;
+    box-shadow: none;
+  }
 }
