@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+  grid-column: 2/4;
+  padding: 16px 32px;
+  background-color: #ffffff;
+}
+
+.header__user--name {
+  font-weight: 500;
+  line-height: 24px;
+  color: #3E3E47;
+}
+
+.header__user--photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #F4F5F5;
+}
+
+.header__user--icon {
+  color: #A5A5AC;
+}

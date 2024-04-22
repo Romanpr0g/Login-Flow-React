@@ -1,0 +1,72 @@
+.ant-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-modal .ant-modal-content {
+  padding: 50px 52px;
+}
+
+.modal-window__image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+
+.modal-window__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #22222b;
+  margin-bottom: 16px;
+}
+
+.modal-window__info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #808089;
+}
+
+.ant-modal-footer {
+  display: flex;
+  gap: 8px;
+
+  .ant-btn {
+    height: 48px;
+  }
+  .ant-btn-default {
+    width: 82px;
+    color: #414ef6;
+    border: 1px solid #414ef6;
+    padding: 12px 17px 12px 20px;
+  }
+  .ant-btn-primary {
+    width: 129px;
+    background-color: #eb5757;
+    order: -1;
+    padding: 12px 24px;
+  }
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-btn-primary:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  background: #ff3939;
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: #7a83f9;
+  border-color: #7a83f9;
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):active {
+  color: #2d37ac;
+  border-color: #2d37ac;
+}

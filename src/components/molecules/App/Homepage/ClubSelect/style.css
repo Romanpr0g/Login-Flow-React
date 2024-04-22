@@ -1,0 +1,49 @@
+.club-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.club-select__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #F4F5F5;
+  border: 2px solid #FFFFFF;
+}
+
+.club-select__info {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  fill: #F4F5F5;
+}
+
+.select-info__club {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.select-info__team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.4%;
+}
+
+.club-select__chevron {
+  position: absolute;
+  right: 70px;
+  bottom: 10px;
+  color: #F4F5F5;
+  width: 12px;
+  height: 12px;
+}
+
+.club-select__icon {
+  color: #808089;
+}

@@ -1,0 +1,27 @@
+.team-roster__wrapper {
+  padding: 34px 32px;
+}
+
+.team-roster__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.team-roster__filter {
+  width: 200px;
+
+  .ant-select-selector {
+    padding: 13px 32px 13px 48px !important;
+    height: 40px !important;
+  }
+
+  .ant-select-selector::before {
+    position: absolute;
+    content: url("../../../../assets//svg//filter.svg");
+    left: 16px;
+    top: 8px;
+  }
+}
