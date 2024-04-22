@@ -45,11 +45,10 @@
     }
 
     .member-card__telephone {
-      color: #3E3E47;
+      color: #3e3e47;
       line-height: 24px;
     }
   }
-
 
   .member-card__pending-status {
     font-size: 12px;
@@ -67,5 +66,13 @@
       color: #eb5757;
       margin-left: 54px;
     }
+  }
+}
+
+.member-card__filter {
+  width: 120px;
+
+  .ant-select-selector {
+    height: 36px !important;
   }
 }
