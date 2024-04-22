@@ -11,7 +11,7 @@ const TeamDetails: React.FC = () => {
     <>
       <TeamDetailsHeader team={state.team} />
       <div className="team-details__block">
-        <TeamRoster team={state.team}/>
+        <TeamRoster team={state.team} />
         {/* <div className="team-details__empty">
           <Empty
             title="Members"

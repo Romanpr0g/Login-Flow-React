@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { message, Upload } from "antd";
 import type { GetProp, UploadProps } from "antd";
-import teamImg from "../../../../assets/img/team2.png";
 import { ReactComponent as Camera } from "../../../../assets/svg/camera.svg";
+
 import "./style.scss";
+
+type ImgUploaderProps = {
+  defaultUrl?: string;
+  defaultIcon?: boolean;
+};
 
 type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
 
@@ -26,7 +30,10 @@ const beforeUpload = (file: FileType) => {
   return isJpgOrPng && isLt2M;
 };
 
-const ImgUploader: React.FC = () => {
+const ImgUploader: React.FC<ImgUploaderProps> = ({
+  defaultUrl,
+  defaultIcon,
+}) => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
 
@@ -49,6 +56,7 @@ const ImgUploader: React.FC = () => {
       listType="picture-circle"
       className="avatar-uploader"
       showUploadList={false}
+      style={{width: 10, height: 10}}
       action="/api/img"
       beforeUpload={beforeUpload}
       onChange={handleChange}
@@ -56,7 +64,10 @@ const ImgUploader: React.FC = () => {
       {imageUrl ? (
         <img src={imageUrl} alt="avatar" />
       ) : (
-        <img src={teamImg} className="uploader--default-img" />
+        <img
+          src={defaultUrl}
+          className="uploader--default-img"
+        />
       )}
       <Camera className="hover-svg" />
     </Upload>

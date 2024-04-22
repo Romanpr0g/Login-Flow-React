@@ -2,17 +2,17 @@ import React from "react";
 import { Select } from "antd";
 import "./style.scss";
 
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
+type FilterSelectProps = {
+  classname: string;
+  defaultValue: string;
 };
 
-const FilterSelect: React.FC = () => (
+const FilterSelect: React.FC<FilterSelectProps> = ({ classname, defaultValue }) => (
   <Select
-    defaultValue="Filter by Role"
-    className="filter-selector"
-    style={{ width: 200 }}
+    defaultValue={defaultValue}
+    className={classname}
+    // style={{ width: 200 }}
     dropdownAlign={{ offset: [0, 10] }}
-    onChange={handleChange}
     options={[
       { value: "Athelete", label: "Athelete" },
       { value: "Team Organizer", label: "Team Organizer" },

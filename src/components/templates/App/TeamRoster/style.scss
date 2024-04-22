@@ -3,5 +3,9 @@
 }
 
 .team-roster__list {
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0;
 }

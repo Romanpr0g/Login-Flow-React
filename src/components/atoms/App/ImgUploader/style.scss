@@ -32,31 +32,22 @@
   display: none;
 }
 
-:where(
-    .css-dev-only-do-not-override-1xg9z9n
-  ).ant-upload-wrapper.ant-upload-picture-circle-wrapper
+
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper
   .ant-upload.ant-upload-select {
   width: 88px;
   height: 88px;
 }
 
-:where(
-    .css-dev-only-do-not-override-1xg9z9n
-  ).ant-upload-wrapper.ant-upload-picture-card-wrapper
+.ant-upload-wrapper.ant-upload-picture-card-wrapper
   .ant-upload.ant-upload-select,
-:where(
-    .css-dev-only-do-not-override-1xg9z9n
-  ).ant-upload-wrapper.ant-upload-picture-circle-wrapper
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper
   .ant-upload.ant-upload-select {
   border: 0;
 }
 
-:where(
-    .css-dev-only-do-not-override-1xg9z9n
-  ).ant-upload-wrapper.ant-upload-picture-card-wrapper,
-:where(
-    .css-dev-only-do-not-override-1xg9z9n
-  ).ant-upload-wrapper.ant-upload-picture-circle-wrapper {
+.ant-upload-wrapper.ant-upload-picture-card-wrapper,
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper {
   width: 88px;
 }
 

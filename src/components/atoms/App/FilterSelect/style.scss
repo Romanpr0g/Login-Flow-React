@@ -1,26 +1,42 @@
-:where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single:not(
+.ant-select-outlined:not(.ant-select-disabled):not(
     .ant-select-customize-input
-  )
+  ):not(.ant-pagination-size-changer):hover
   .ant-select-selector {
-  padding: 13px 32px 13px 48px;
-  height: 40px;
+  border: 1px solid #e2e2e4;
 }
 
-.ant-select-selector::before {
-  position: absolute;
-  content: url("../../../../assets//svg//filter.svg");
-  left: 16px;
-  top: 8px;
+.ant-select-focused.ant-select-outlined:not(.ant-select-disabled):not(
+    .ant-select-customize-input
+  ):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  border-color: #e2e2e4;
 }
 
-:where(.css-dev-only-do-not-override-1xg9z9n).ant-select .ant-select-arrow {
+.ant-select .ant-select-arrow {
   top: 20px;
   right: 14px;
 }
 
-:where(.css-dev-only-do-not-override-1xg9z9n).ant-select-outlined:not(
-    .ant-select-disabled
-  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+.team-roster__filter {
+  width: 200px;
+
   .ant-select-selector {
-  border: 1px solid #e2e2e4;
+    padding: 13px 32px 13px 48px !important;
+    height: 40px !important;
+  }
+
+  .ant-select-selector::before {
+    position: absolute;
+    content: url("../../../../assets//svg//filter.svg");
+    left: 16px;
+    top: 8px;
+  }
+}
+
+.member-card__filter {
+  width: 120px;
+
+  .ant-select-selector {
+    height: 36px !important;
+  }
 }

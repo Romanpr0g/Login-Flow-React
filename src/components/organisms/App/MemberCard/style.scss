@@ -1,0 +1,71 @@
+.mamber-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #eaeaeb;
+  padding: 24px 22px;
+  cursor: pointer;
+
+  .member-card__person-block {
+    display: flex;
+    align-items: center;
+    .member-card__img {
+      width: 44px;
+      height: 44px;
+      background-color: #f4f5f5;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 18px;
+      margin-right: 12px;
+      .member-card__icon {
+        color: #a5a5ac;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .member-card__name-block {
+      margin-right: 59px;
+
+      .member-card__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #22222b;
+      }
+
+      .member-card__role {
+        font-size: 12px;
+        line-height: 16px;
+        color: #808089;
+      }
+    }
+
+    .member-card__telephone {
+      color: #3E3E47;
+      line-height: 24px;
+    }
+  }
+
+
+  .member-card__pending-status {
+    font-size: 12px;
+
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: #ffda32;
+    text-transform: uppercase;
+  }
+
+  .member-card__details-block {
+    display: flex;
+    align-items: center;
+    .member-card__remove-icon {
+      color: #eb5757;
+      margin-left: 54px;
+    }
+  }
+}

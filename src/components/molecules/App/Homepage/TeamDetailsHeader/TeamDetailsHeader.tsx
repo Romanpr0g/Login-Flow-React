@@ -3,6 +3,7 @@ import BackButton from "../../../../atoms/App/BackButton/BackButton";
 import DeleteButton from "../../../../atoms/App/DeleteButton/DeleteButton";
 import ImgUploader from "../../../../atoms/App/ImgUploader/ImgUploader";
 import { ReactComponent as Cross } from "../../../../../assets/svg/cross.svg";
+import teamImg from "../../../../../assets/img/team2.png";
 import axios from "axios";
 import { Input } from "antd";
 import "./style.scss";
@@ -33,7 +34,6 @@ const TeamDetailsHeader: React.FC<TeamDetailsHeaderProps> = ({ team }) => {
     } catch (error) {
       console.error("Error updating team name:", error);
     }
-   
   };
 
   const handleFocus = () => {
@@ -61,7 +61,7 @@ const TeamDetailsHeader: React.FC<TeamDetailsHeaderProps> = ({ team }) => {
       </div>
       <div className="team-details__team-info">
         <div className="team-info__block">
-          <ImgUploader />
+          <ImgUploader defaultUrl={teamImg} />
           <Input
             className="team-info__title"
             value={name}
@@ -76,7 +76,12 @@ const TeamDetailsHeader: React.FC<TeamDetailsHeaderProps> = ({ team }) => {
             />
           )}
         </div>
-        <DeleteButton name="Team" width={113} height={40} onDelete={handleDelete} />
+        <DeleteButton
+          name="Team"
+          width={113}
+          height={40}
+          onDelete={handleDelete}
+        />
       </div>
     </div>
   );
