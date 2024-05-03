@@ -8,13 +8,8 @@ import React, {
 import Empty from "../Empty/Empty";
 import TeamCard from "../../../organisms/App/TeamCard/TeamCard";
 import FeaturedTeamSkeleton from "../../../organisms/App/Skeleton/FeaturedTeamsSkeleton/FeaturedTeamSkeleton";
+import type { Team } from "../../../../types/api";
 import "./style.css";
-
-type Team = {
-  id: number;
-  name: string;
-  members: number;
-};
 
 const FeaturedTeams: React.FC<PropsWithChildren> = ({ children }) => {
   const [data, setData] = useState<{ teams: Team[] } | null>(null);

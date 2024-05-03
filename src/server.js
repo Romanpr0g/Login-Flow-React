@@ -10,10 +10,8 @@ export function makeServer() {
     routes() {
       this.namespace = "api";
 
-
       this.post("img", () => {
-        // Вернуть тестовые данные или обработать запрос
-        return { message: 'Success' };
+        return { message: "Success" };
       });
 
       this.get("/user", () => ({
@@ -23,6 +21,12 @@ export function makeServer() {
       this.get("/teams", (schema) => {
         return {
           teams: schema.db.teams,
+        };
+      });
+
+      this.get("/teams/members", (schema) => {
+        return {
+          members: schema.db.members,
         };
       });
 
@@ -113,9 +117,47 @@ export function makeServer() {
       { id: 5, code: 55555 },
     ],
     teams: [
-      { id: 1, name: "U8 Puffer", members: 24 },
-      { id: 2, name: "Wildkard U12s", members: 24 },
-      { id: 3, name: "U8 Puffer", members: 24 },
+      {
+        id: 1,
+        name: "U8 Puffer",
+        members: 24,
+      },
+      {
+        id: 2,
+        name: "Wildkard U12s",
+        members: 24
+      },
+      {
+        id: 3,
+        name: "U8 Puffer",
+        members: 24,
+      },
+    ],
+    members: [
+      {
+        id: 1,
+        name: "Mark Drummond",
+        patronymic: "mdrummond",
+        telephoneNumber: "349-494-9932",
+        pendingStatus: true,
+        role: "Athelete",
+      },
+      {
+        id: 2,
+        name: "Roman",
+        patronymic: "mdrummond",
+        telephoneNumber: "349-494-9932",
+        pendingStatus: false,
+        role: "Athelete",
+      },
+      {
+        id: 3,
+        name: "Dima Fesik",
+        patronymic: "mdrummond",
+        telephoneNumber: "349-494-9932",
+        pendingStatus: true,
+        role: "Athelete",
+      },
     ],
   });
 

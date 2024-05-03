@@ -40,7 +40,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({
         {"Delete" + " " + name}
       </button>
       <ModalWindow
-        visible={modalVisible}
+        open={modalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
         okText="Delete Team"

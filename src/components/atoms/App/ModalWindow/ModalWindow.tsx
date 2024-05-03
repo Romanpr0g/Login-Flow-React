@@ -4,7 +4,7 @@ import teamImg from "../../../../assets/img/team2.png";
 import "./style.scss";
 
 type ModalWindowProps = {
-  visible: boolean;
+  open: boolean;
   onOk: () => void;
   onCancel: () => void;
   okText: string;
@@ -12,7 +12,7 @@ type ModalWindowProps = {
 };
 
 const ModalWindow: React.FC<ModalWindowProps> = ({
-  visible,
+  open,
   onOk,
   onCancel,
   okText,
@@ -37,7 +37,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
 
   return (
     <Modal
-      visible={visible}
+      open={open}
       onOk={handleOk}
       confirmLoading={confirmLoading}
       onCancel={handleCancel}
